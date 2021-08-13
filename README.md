@@ -3,7 +3,7 @@ A solution for executing remote command on windows instances from an on-prem lin
 
 ![alt text](https://github.com/laurent-richer/aws-ssm/blob/master/RemoteExecutionArchitecture.png)
 
-The on-prem server use a temporary role-based authentication and authorization, therefore there is no need to create a specific user. So this solution is compatible with a federated authentication. As credentials are temporary it needs to be periodically refreshed, for that purpose we implemented the ruby script 'get_sts_creds' from  https://github.com/awslabs/aws-codedeploy-samples.git
+The on-prem server use a temporary role-based authentication and authorization, therefore there is no need to create a specific user. So this solution is compatible with a federated authentication. As credentials are temporary, they need to be periodically refreshed, for that purpose we implemented the ruby script 'get_sts_creds' from  https://github.com/awslabs/aws-codedeploy-samples.git
 ## Global requirements
 1) An on-prem linux server [1] which control the execution of the remote command .
 2) An EC2 instance [2] that will be used as our first credential generator. 
