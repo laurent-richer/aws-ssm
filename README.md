@@ -1,7 +1,7 @@
 # aws-ssm
 An AWS solution for executing remote command to windows instances hosted on AWS from an on-prem linux server. 
 
-![alt text](https://github.com/laurent-richer/aws-ssm/blob/8c9458e9e2b6e81cb74ee1ef2de7a872f27a9a3e/RemoteExecutionArchitecture.png)
+![alt text](https://github.com/laurent-richer/aws-ssm/blob/master/RemoteExecutionArchitecture.png)
 
 The on-prem server use a temporary role-based authentication and authorization, therefore there is no need to create a specific user. As credentials are temporary it needs to be periodically refreshed, for that purpose we implemented the ruby script 'get_sts_creds' from  https://github.com/awslabs/aws-codedeploy-samples.git
 ## Global requirements
