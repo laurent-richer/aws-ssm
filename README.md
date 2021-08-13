@@ -1,4 +1,4 @@
-# aws-ssm
+# aws-ssm-rpa
 A solution for executing remote command on windows instances from an on-prem linux server. Thanks to AWS SSM Run Command, you can automate executing tasks on dozens of servers under different Active Directory (AD) accounts.
 
 ![alt text](https://github.com/laurent-richer/aws-ssm/blob/master/RemoteExecutionArchitecture.png)
