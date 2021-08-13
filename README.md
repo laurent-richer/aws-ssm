@@ -62,7 +62,7 @@ The on-prem server use a temporary role-based authentication and authorization, 
    ```
    * Then edit the user's crontab in order to setup the credential refresh frequency to 15 minutes
    ```
-   crontab -e
+   #crontab -e
    0,15,30,45 * * * * utilities/aws-codedeploy-session-helper/bin/get_sts_creds --role-arn arn:aws:iam::<account>:role/EC2SSMRunCommand --file ~/.aws/credentials --session-name-override onprem-linux --region <region>
    ```
    Now the cron script will call AWS STS every 15 minutes and copy the new security credentials into *~/.aws/credentials* 
@@ -75,7 +75,7 @@ The on-prem server use a temporary role-based authentication and authorization, 
   * Follow the documentation to create your credentials vault : https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html 
   * In this solution I've created a Secure String Parameter with the following parameter-name : "/org/user/pass/$user"    
 ## Running a command from your linux on-prem server
-* Check that your security credentials are correctly synchronized with the assumed role EC2SSMRUnCommand using the following command :
+* Check that your security credentials are correctly synchronized with the assumed role *EC2SSMRUnCommand* with the following command :
 ```
 aws sts get-caller-identity
 ```
